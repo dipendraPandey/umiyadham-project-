@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+    <div>
+        {% for block in page.content %}
+
+        {% if block == Image_Gallery%}
+         <P>hello</P>
+       {%endif%}
+        {% include_block block %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+<div class="navbar  navbar-expand-lg bg-light fixed-top">
+    <div class="col-lg-1 col-md-2 col-sm-2">
+        <p>logo image</p>
+        <img class="responsive" align="center" src="#" style="color:red;width:4vw;height:4vw;"
+             alt="no-image to load" style="">
+    </div>
+    <!-- Navbar text_logo here -->
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <h3 class="text-secondary" style="font-size:1.56vw;"> The Hellow World <br>
+            and  Tests</h3>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 mx-3vw">
+        <button al class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {%for item in navigation.menu_items.all%}
+                {% if item.title|slugify in menus %}
+                {% get_menu item.title|slugify as name %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">{{item.title|title}}</a>
+                    <div class="dropdown-menu">
+                        {%for sub in name.menu_items.all%}
+                        <a class="dropdown-item" href="{{sub.link}}" {%if item.open_in_new_tab%} target="_blank"
+                           {%endif%}u}}>{{sub.title}}<span class="sr-only">(current)</span></a></a>
+                        {%endfor%}
+                    </div>
+                </li>
+                {%else%}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{item.link}}" {%if item.open_in_new_tab%} target="_blank" {%endif%}>{{item.title}}
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                {%endif%}
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+############################### nab bar
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            {%for item in navigation.menu_items.all%}
+
+            {% if item.title|slugify in menus %}
+            {% get_menu item.title|slugify as name %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">{{item.title|title}}</a>
+                <div class="dropdown-menu">
+                    {%for sub in name.menu_items.all%}
+                    <a class="dropdown-item" href="{{sub.link}}" {%if item.open_in_new_tab%} target="_blank"
+                       {%endif%}u}}>{{sub.title}}<span class="sr-only">(current)</span></a></a>
+                    {%endfor%}
+                </div>
+            </li>
+            {%else%}
+
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{item.link}}" {%if item.open_in_new_tab%} target="_blank" {%endif%}>{{item.title}}
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            {%endif%}
+            {%endfor%}
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            {%for item in navigation.menu_items.all%}
+
+            {% if item.title|slugify in menus %}
+            {% get_menu item.title|slugify as name %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false"><h5 class="mx-2">{{item.title|title}}</h5></a>
+                <div class="dropdown-menu">
+                    {%for sub in name.menu_items.all%}
+                    <a class="dropdown-item" href="{{sub.link}}" {%if item.open_in_new_tab%} target="_blank"
+                       {%endif%}u}}><h6>{{sub.title}}</h6><span class="sr-only">(current)</span></a></a>
+                    {%endfor%}
+                </div>
+            </li>
+            {%else%}
+
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{item.link}}" {%if item.open_in_new_tab%} target="_blank"
+                   {%endif%}>{{item.title}}
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            {%endif%}
+            {%endfor%}
+        </ul>
+
+    </div>
+</nav>

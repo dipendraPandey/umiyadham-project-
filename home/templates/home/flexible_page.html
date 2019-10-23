@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+
+
+<div class="content">
+    <div class="row">
+
+
+        {% for block in page.content %}
+        {% include_block block %}
+        {% endfor %}
+
+
+    </div>
+</div>
+
+
+}
+{% endblock %}
+
+
+

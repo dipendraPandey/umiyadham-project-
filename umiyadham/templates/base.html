@@ -1,0 +1,189 @@
+{% load static wagtailuserbar menus_tags wagtailcore_tags %}
+
+{%get_menu "main" as navigation %}
+{% all_menus as menus%}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    {# Global stylesheets #}
+    <script src="https://kit.fontawesome.com/87f31fcd33.js" crossorigin="anonymous"></script>
+
+    {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/umiyadham.css' %}">
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" crossorigin="anonymous">
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+
+</head>
+<body class="{% block body_class %}{% endblock %}" style="background-color:#993d00">
+{% wagtailuserbar %}
+<!--The test for the nav bar-->
+
+
+<!-- the test for nav bar ends here-->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"><h1 style="color: #ffc266;font-size:2vw;">Udmiya Dham</h1></a>
+    <img class="img-fluid"  src="{%static 'images/unnamed.png'%}" alt="Image Not Found" width="150vw" height="150vw">
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-5" id="navbarColor01">
+        <ul class="navbar-nav mr-auto mt-5">
+            <li class="nav-item active">
+                <a class="nav-link" href="/"><h5 style="font-size:1vw;">Home</h5><span class="sr-only">(current)</span></a>
+            </li>
+
+            {%for item in navigation.menu_items.all%}
+
+            {% if item.title|slugify in menus %}
+            {% get_menu item.title|slugify as name %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false"><h5 class="mx-1" style="font-size:1vw;">{{item.title|title}}</h5></a>
+                <div class="dropdown-menu">
+                    {%for sub in name.menu_items.all%}
+                    <a class="dropdown-item" href="{{sub.link}}" {%if item.open_in_new_tab%} target="_blank"
+                       {%endif%}u}}><h6>{{sub.title}}</h6><span class="sr-only">(current)</span></a></a>
+                    {%endfor%}
+                </div>
+            </li>
+            {%else%}
+
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{item.link}}" {%if item.open_in_new_tab%} target="_blank" {%endif%}>{{item.title}}
+                    <span class="sr-only">(current)</span></a>
+            </li>
+            {%endif%}
+            {%endfor%}
+        </ul>
+
+    </div>
+    <div class="container ml-auto ">
+   <img class="img-fluid" src="{%static 'images/ganpati.png'%}" alt="Image Not Found" height="150vw" width="150vw">
+    </div>
+</nav>
+<!--this is the content for adding bread crumbs -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+
+            <nav aria-label="breadcrumb" style="align:center">
+                <ol class="breadcrumb">
+                    {% if self.get_ancestors|length > 1 %}
+                    {% for page in self.get_ancestors %}
+                    {% if page.is_root == False %}
+                    <li class="breadcrumb-item"><a href="{% pageurl page %}">{{ page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    <li class="breadcrumb-item active" aria-current="page">{{ self.title }}</li>
+                    {%else%}
+                    <li class="breadcrumb-item active" aria-current="page">{{ self.title }}</li>
+                </ol>
+
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!--bread crumbs ends -->
+
+
+{% block content%}
+
+<h1 style="align:center; color:red">NO content to display</h1>
+<hr>
+<hr>
+<p style="align:center; color :red"> you jst called the base page only <br>
+    no content in your page or configuration wrong for the CONTENT BLOCK <br>
+</p>
+<hr>
+{% endblock %}
+
+<hr>
+<hr>
+
+<!--here is the icon of the different social medial -->
+
+
+<footer class="footer offset ml-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
+
+                {%if settings.site_settings.SocialMediaSettings.facebook%}
+                <a href="{{settings.site_settings.SocialMediaSettings.facebook}}">
+                    <span class="dipendra" style="font-size: 2em;color:#0052cc">
+                    <i class="fab fa-facebook mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.twitter%}
+                <a href="{{settings.site_settings.SocialMediaSettings.twitter}}">
+                    <span style="font-size: 2em; color:#00ccff;">
+                    <i class="fab fa-twitter mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.youtube%}
+                <a href="{{settings.site_settings.SocialMediaSettings.youtube}}">
+                    <span style="font-size: 2em; color:#cc0000;">
+                    <i class="fab fa-youtube mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.instagram%}
+                <a href="{{settings.site_settings.SocialMediaSettings.instagram}}">
+                    <span style="font-size: 2em; color:#ff6666;">
+                   <i class="fab fa-instagram siz-3"></i>
+                    </span>
+                </a>
+                {%endif%}
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--the media icon ends here-->
+
+{# Global javascript #}
+
+{% block extra_js %}
+{# Override this in templates to add extra javascript #}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/umiyadham.js' %}"></script>
+{% endblock %}
+</body>
+</html>

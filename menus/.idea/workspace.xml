@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4109ef6-2a40-4d34-843f-bcd1f3488c3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/templates/contact/contact_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/templates/contact/contact_page_landing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contact/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/Blocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0002_create_homepage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0003_auto_20191016_1136.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0004_auto_20191016_1932.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0005_auto_20191017_1328.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/0006_auto_20191019_1302.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/static/css/welcome_page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/home/flexible_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/home/home_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/home/welcome_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/Flex_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/button_block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/card_block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/ctablock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/image_gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/richtext_block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/simplerichtext_block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/streams/title_and_text_block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/templates/table_block/blocks/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home/wagtail_hooks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/avatar_images/avatar_f78c0000-a518-4b20-9bf2-fab4b5ee1f6a_dipendra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-200x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-300x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-500x100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-900x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.2e16d0ba.fill-900x400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/bootstrap-4-tutorial.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi02_t.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi02_t.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi02_t.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi05_t.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi05_t.height-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi05_t.height-1400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi05_t.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi05_t.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t.height-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t_ulcy7MU.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t_ulcy7MU.height-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t_ulcy7MU.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t_ulcy7MU.width-100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/devi06_t_ulcy7MU.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316.2e16d0ba.fill-1200x1000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316.2e16d0ba.fill-14000x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1200x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1200x400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1200x700.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1200x800.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1400x400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-1400x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_0413161.2e16d0ba.fill-900x1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_04131612.2e16d0ba.fill-200x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_04131612.2e16d0ba.fill-500x500.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_04131612.2e16d0ba.fill-900x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_04131612.2e16d0ba.fill-900x400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125.2e16d0ba.fill-80x100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.max-800x600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.width-1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.width-200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/kalratri_146053202713_650_041316125137.width-800.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/smartphone.2e16d0ba.fill-1200x900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/smartphone.2e16d0ba.fill-300x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/smartphone.2e16d0ba.fill-500x100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/smartphone.2e16d0ba.fill-900x400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/images/smartphone.max-165x165.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/bootstrap-4-tutorial.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/devi02_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/devi05_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/devi06_t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/devi06_t_ulcy7MU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/kalratri_146053202713_650_041316125137.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/original_images/smartphone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templatetags/menus_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../search/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../search/templates/search/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../search/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/settings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/settings/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/settings/dev.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/settings/production.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/static/css/umiyadham.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/static/js/umiyadham.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/templates/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyadham/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/migrations/0002_auto_20191016_1933.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/migrations/0003_masterpage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/migrations/0004_auto_20191021_1529.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/templates/umiyama/create_maa_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/templates/umiyama/umiya_maa_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../umiyama/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1SVsz72bRIyUj8veDOMudL713Lv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4109ef6-2a40-4d34-843f-bcd1f3488c3e" name="Default Changelist" comment="" />
+      <created>1571660356641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571660356641</updated>
+    </task>
+    <servers />
+  </component>
+</project>
