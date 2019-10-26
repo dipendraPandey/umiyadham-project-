@@ -9,8 +9,9 @@
 <!-- the test for nav bar ends here-->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#"><h1 style="color: #ffc266;font-size:2vw;"><b>Udmiya Dham </b> </h1></a>
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#993d00">
+    <img src="{%static 'images/umiyadham.gif' %}" alt="no image found">
+<!--    <a class="navbar-brand" href="#"><h1 style="color: #ffc266;font-size:2vw;"><b>Udmiya Dham </b> </h1></a>-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,7 +19,7 @@
 
     <div class="collapse navbar-collapse ml-5" id="navbarColor01">
         <ul class="navbar-nav mr-auto mt-5">
-            <li class="nav-item active">
+            <li class="btn btn-outline-warning">
                 <a class="nav-link" href="/"><h5 >Home</h5><span class="sr-only">(current)</span></a>
             </li>
 
@@ -26,13 +27,13 @@
 
             {% if item.title|slugify in menus %}
             {% get_menu item.title|slugify as name %}
-            <li class="nav-item dropdown">
+            <li class="btn btn-outline-warning dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                    aria-expanded="false"><h5 class="mx-1">{{item.title|title}}</h5></a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" >
                     {%for sub in name.menu_items.all%}
                     <a class="dropdown-item" href="{{sub.link}}" {%if item.open_in_new_tab%} target="_blank"
-                       {%endif%}u}}><h6>{{sub.title}}</h6><span class="sr-only">(current)</span></a></a>
+                       {%endif%} }}><h6>{{sub.title}}</h6><span class="sr-only">(current)</span></a></a>
                     {%endfor%}
                 </div>
             </li>
