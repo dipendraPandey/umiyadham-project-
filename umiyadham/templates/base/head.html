@@ -1,0 +1,28 @@
+{% load wagtailcore_tags static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    {# Global stylesheets #}
+    <script src="https://kit.fontawesome.com/87f31fcd33.js" crossorigin="anonymous"></script>
+
+    {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/umiyadham.css' %}">
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" crossorigin="anonymous">
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+
+</head>

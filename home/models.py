@@ -1,4 +1,6 @@
 from django.db import models
+from modelcluster.models import ClusterableModel
+from wagtail.snippets.models import register_snippet
 from wagtail.admin.edit_handlers import (
     MultiFieldPanel,
     FieldPanel,
@@ -12,12 +14,13 @@ from wagtail.core.models import Page
 from wagtail.contrib.table_block.blocks import TableBlock
 from . import Blocks
 
+
 # ###################  This is the Model for Home Page ################## @dipendra
 class HomePage(Page):
     max_count = 1
     template = "home/home_page.html"
     # the below subpage is responsible for how many types of page can be created under Home page
-   # subpage_types = []
+    # subpage_types = []
     parent_page_types = ["wagtailcore.Page"]
     banner_title = models.CharField(max_length=120, blank=False, null=True)
     banner_subtitle = RichTextField(features=['bold', 'italic'], blank=True, null=True)
@@ -31,7 +34,7 @@ class HomePage(Page):
     body = RichTextField(blank=True)
     content = StreamField(
         [
-            ("Full_RichText", Blocks.RichtextBLock()),
+            ("Full_RichText",Blocks.RichtextBLock()),
             ("Title_Text", Blocks.TitleAndTextBlock()),
             ("Button", Blocks.ButtonBlock()),
             ("Cards", Blocks.CardBlock()),
@@ -51,6 +54,51 @@ class HomePage(Page):
         StreamFieldPanel("content")
 
     ]
+
+
+class EventCreation(Page):
+    template = "event_and_news/event_creation.html"
+    event_title = models.CharField(max_length=250, blank=False)
+    event_description = StreamField(
+        [
+            ("Full_RichText", Blocks.RichtextBLock()),
+            ("Table", Blocks.CreateTable()),
+            ("Gallery", Blocks.ImageGallery()),
+            ("Title_text", Blocks.TitleAndTextBlock()),
+            ("Button", Blocks.ButtonBlock()),
+        ], help_text="Event description",
+    )
+    event_history = StreamField(
+        [
+            ("Full_RichText", Blocks.RichtextBLock()),
+            ("Title_and_Text", Blocks.TitleAndTextBlock()),
+            ("Gallery", Blocks.ImageGallery()),
+        ]
+    )
+    event_completion = models.BooleanField(blank=False, default=False)
+    panels = [
+        FieldPanel('event_title'),
+        StreamFieldPanel('event_description'),
+        FieldPanel('event_completion')
+    ]
+
+
+class NewsCreation(Page):
+    template = "event_and_news/news_creation.html"
+    news_title = models.CharField(max_length=250, blank=False)
+    news_description = StreamField(
+        [
+            ("Full_RichText", Blocks.RichtextBLock()),
+            ("Table", Blocks.CreateTable()),
+            ("Gallery", Blocks.ImageGallery()),
+            ("Title_text", Blocks.TitleAndTextBlock()),
+            ("Button", Blocks.ButtonBlock()),
+        ], help_text="News description",
+    )
+    panels = [
+        FieldPanel('news_title'),
+        StreamFieldPanel("news_description"),
+             ]
 
 
 # ############ This is the Flexible page model ########## @dipendra
@@ -89,5 +137,3 @@ class FlexiblePage(Page):
         FieldPanel("page_subtitle"),
         StreamFieldPanel("content")
     ]
-
-

@@ -1,0 +1,45 @@
+{%load wagtailcore_tags%}
+<!--here is the icon of the different social medial -->
+
+
+<footer class="footer offset ml-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
+
+                {%if settings.site_settings.SocialMediaSettings.facebook%}
+                <a href="{{settings.site_settings.SocialMediaSettings.facebook}}">
+                    <span class="dipendra" style="font-size: 2em;color:#0052cc">
+                    <i class="fab fa-facebook mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.twitter%}
+                <a href="{{settings.site_settings.SocialMediaSettings.twitter}}">
+                    <span style="font-size: 2em; color:#00ccff;">
+                    <i class="fab fa-twitter mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.youtube%}
+                <a href="{{settings.site_settings.SocialMediaSettings.youtube}}">
+                    <span style="font-size: 2em; color:#cc0000;">
+                    <i class="fab fa-youtube mx-3" ></i>
+                    </span>
+                </a>
+                {%endif%}
+                {%if settings.site_settings.SocialMediaSettings.instagram%}
+                <a href="{{settings.site_settings.SocialMediaSettings.instagram}}">
+                    <span style="font-size: 2em; color:#ff6666;">
+                   <i class="fab fa-instagram siz-3"></i>
+                    </span>
+                </a>
+                {%endif%}
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--the media icon ends here-->

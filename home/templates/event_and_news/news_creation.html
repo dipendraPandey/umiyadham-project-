@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block body_class %}template-homepage{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-2">
+        <b>{{self.news_title}}</b>
+        </div>
+    </div>
+</div>
+<!--end of body content-->
+
+
+<!--this is the content panel -->
+<div class="container">
+    {% for block in page.news_description %}
+    {% include_block block %}
+    {% endfor %}
+</div>
+{% endblock %}

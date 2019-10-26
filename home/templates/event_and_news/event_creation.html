@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+{% block content %}
+
+<div class="content">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-2">
+
+        <b>{{self.event_title}}</b>
+        </div>
+    </div>
+</div>
+
+<!--end of body content-->
+
+
+<!--this is the description and history panels  -->
+<div class="container">
+    {% for block in page.event_description %}
+    {% include_block block %}
+    {% endfor %}
+</div>
+{% if self.event_completion %}
+<div class="container">
+    {% for block in page.event_history %}
+    {% include_block block %}
+    {% endfor %}
+</div>
+{%endif%}
+{% endblock %}
