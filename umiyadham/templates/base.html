@@ -14,16 +14,10 @@
 {%endblock navigation_bar%}
 
 <!--this is the content for adding bread crumbs -->
-<div class="container " >
-    <div class="row">
                 <ol class="breadcrumb " style="color:#ffff00">
                     {% if self.get_ancestors|length > 1 %}
                     {% for page in self.get_ancestors %}
                     {% if page.is_root == False %}
-                   {%if page.type %}
-                    <li class="breadcrumb-item">{{page.types}}</li>
-                    {%endif%}
-
                     {%if forloop.counter == 2 %}
                     <li class="breadcrumb-item"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     {%else%}

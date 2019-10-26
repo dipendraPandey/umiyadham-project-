@@ -3,16 +3,19 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 {% block content %}
 {% image self.maa_image height-1200 as maa %}
-<div class="container mt-5 mb-5">
-    <div class="text-center">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
         <h1>{{self.maa_name}}</h1>
+        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-<img src="{{maa.url}}" alt="{{maa.alt}}" style="width:auto;height:auto;" class="mx-auto rounded float-left">
-        <div class="col-lg-8 offset-lg-2">
+<img src="{{maa.url}}" alt="{{maa.alt}}" style="width:auto;height:auto;" class="rounded float-left">
+        <div class="col-xs-12 col-md-6 ">
           {{self.maa_description|richtext}}
         </div>
     </div>
